@@ -22,3 +22,15 @@ To watch for changes and run the tests:
 
     > npm run test:watch
 
+For the next commands, install webpack globally:
+
+    > npm install -g webpack webpack-dev-server
+
+To build client package:
+
+    > webpack
+
+To serve up the client at [http://localhost:8080/](http://localhost:8080/):
+
+    > webpack-dev-server
+
