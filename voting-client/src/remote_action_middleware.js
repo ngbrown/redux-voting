@@ -3,6 +3,8 @@
 // action. The innermost function is where the middleware implementation will
 // actually go.
 export default socket => store => next => action => {
-  socket.emit("action", action);
+  if (action.meta && action.meta.remote) {
+    socket.emit("action", action);
+  }
   return next(action);
 };

@@ -2,6 +2,7 @@ import React from "react";
 import PureRenderMixin from "react-addons-pure-render-mixin";
 import {connect} from "react-redux";
 import Winner from "./Winner";
+import * as actionCreators from "../action_creators";
 
 // Pure component (react-redux "dumb")
 export const Results = React.createClass({
@@ -61,4 +62,7 @@ function mapStateToProps(state) {
 }
 
 // Connected component (react-redux "smart")
-export const ResultsContainer = connect(mapStateToProps)(Results);
+export const ResultsContainer = connect(
+  mapStateToProps,
+  actionCreators
+)(Results);
